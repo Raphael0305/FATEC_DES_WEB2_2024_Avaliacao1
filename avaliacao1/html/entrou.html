@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/entrou.css">
+</head>
+
+<body>
+        <div class="fundo">
+            <img src="img/img 3 teste.avif" alt="">
+        </div>
+        <div class="title">
+            <h1> Você esta logado como <b>
+                    <?php echo htmlspecialchars($_SESSION["user"]); ?>
+        </div>
+
+        <div class="botoes">
+            <div class="botaum">
+                <button><a href="registrar.php">Registrar solicitação</a></button>
+            </div>
+
+            <div class="botaum">
+                <button><a href="solicitaCurso.php">Verificar solicitação por curso</a> </button>
+            </div>
+
+            <div class="botaum">
+                <button ><a href="solicitacao.php">Todas as solicitações</a></button>
+            </div>
+
+        </div>
+
+        <div class="logout">
+            <button><a href="">SAIR</a></button>
+        </div>
+</body>
+
+</html>
