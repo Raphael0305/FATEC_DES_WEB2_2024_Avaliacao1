@@ -1,9 +1,8 @@
 
 <?php
-// PAGINA DE VERIFICAR LOGIN
-
-
+// PAGINA PARA VERIFICAR LOGIN
 session_start();
+
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,7 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         $_SESSION["logado"] = false;
-        $erro = "Tu erro a senha ou o usuário DOG";
+        $_SESSION["erro"] = "Senha ou usuário errado DOG";
+        header("Location: index.php");
         exit();
     }
 }

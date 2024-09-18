@@ -2,7 +2,10 @@
 <?php
 session_start();
 
-
+if (!isset($_SESSION["logado"]) || $_SESSION["logado"] !== true) {
+    $_SESSION["logado"] = false;
+    $_SESSION["user"] = "Visitante";
+}
 
 ?>
 
@@ -15,11 +18,12 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/entrou.css">
+    
 </head>
 
 <body>
         <div class="fundo">
-            <img src="img/img 3 teste.avif" alt="">
+            <img src="img/img7.jpg" alt="">
         </div>
         <div class="title">
             <h1> Você esta logado como <b>
@@ -32,11 +36,15 @@ session_start();
             </div>
 
             <div class="botaum">
-                <button><a href="solicitaCurso.php">Verificar solicitação por curso</a> </button>
+                <button><a href="GE.php">Visualizar solicitações GE</a> </button>
             </div>
 
             <div class="botaum">
-                <button ><a href="solicitacao.php">Todas as solicitações</a></button>
+                <button><a href="DSM.php">Visualizar solicitações DSM</a> </button>
+            </div>
+
+            <div class="botaum">
+                <button ><a href="solicitacao.php">Visualizar todas solicitações</a></button>
             </div>
 
         </div>

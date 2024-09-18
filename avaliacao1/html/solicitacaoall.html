@@ -1,0 +1,41 @@
+<?php
+session_start();
+
+// Ler os arquivos DSM e GE
+$conteudo_dsm = file_exists('dsm.txt') ? file_get_contents('dsm.txt') : "";
+$conteudo_ge = file_exists('ge.txt') ? file_get_contents('ge.txt') : "";
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style/solicitacaoall.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitações de Laboratório</title>
+</head>
+
+<body>
+
+    <div class="all">
+
+        <h1>Solicitações de Laboratório</h1>
+
+        <div class="solicitacoes">
+            <?php
+            // Exibe o conteúdo dos arquivos GE e DSM combinados
+            echo htmlspecialchars($conteudo_ge);
+            ?>
+            <br><br> <!-- Adiciona uma quebra de linha entre os conteúdos -->
+            <?php
+            echo htmlspecialchars($conteudo_dsm);
+            ?>
+        </div>
+
+    </div>
+
+    <a href="entrou.php">VOLTAR</a>
+</body>
+
+</html>

@@ -2,17 +2,141 @@
     margin: 0;
 }
 
+.all{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .formezada{
+    background-color: rgba(64, 74, 164, 0.31);
     display: flex;
     margin: 0;
     flex-direction: column;
     width: 30%;
     gap: 30px;
     margin: 20px;
-    
+    border: 3px solid rgb(94, 42, 154);
+    border-radius: 10px;
+    padding: 10px;
+    height: 66vh;
 }
 
 .solicitacoes{
     display: flex;
     flex-direction: column;
+}
+
+.laboratorio{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.laboratorio select{
+   border: none;
+   width: 200px;
+   text-align: center;
+   margin: 0px auto;
+   height: 50px;
+   border-radius: 10px;
+   cursor: pointer;
+   background-color: rgba(96, 44, 145, 0.664);
+}
+
+
+.data{
+    text-align: center;
+}
+
+.data input{
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+    background-color: rgba(96, 44, 145, 0.664);
+}
+
+
+.solicitacoes label{
+    font-size: 20px;
+}
+
+.solicitacoes input{
+    height: 70px;
+    background-color: rgba(96, 44, 145, 0.664);
+}
+
+.escolheCurso{
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+
+}
+
+.escolheCurso select{
+    margin-top: 10px;
+    border: none;
+    width: 200px;
+    text-align: center;
+    margin: 0px auto;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(96, 44, 145, 0.664);
+}
+
+
+.submit{
+    margin: 0px auto;
+}
+
+
+.submit button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(96, 44, 145, 0.664);
+    cursor: pointer;
+}
+
+.sair{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.sair button{
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: brown;
+    border-radius: 5px;
+}
+
+a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+    position: absolute;
 }
